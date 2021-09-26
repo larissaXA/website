@@ -205,8 +205,71 @@ section#sobre-nos #sobre-nos-img{
 #depoimento{
     height: 100vh;
     width: 100%;
+    padding: 0 6rem;
+    display: flex;
+    align-items: center;
+}
+#depoimento #carroussel{
+    position: relative;
+    height: 80%;
+    width: inherit;
+    display: flex;
+    overflow: hidden;
+}
+#depoimento button{
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    width: 5vw;
+    outline: none;
+    border: none;
+    font-size: 500%;
+    color: transparent;
+}
+#depoimento button:nth-last-child(1){
+    right: 0;
+}
+#depoimento button:hover{
+    color: var(--blue1);
+    height: 100%;
+    cursor: pointer;
+    transition: all .2s, color .4s;
+    background: rgba(192, 192, 192, 0.1);
+    box-shadow: .5rem 0 .5rem rgba(192, 192, 192, 0.1);
+    border-bottom-left-radius: 5rem;
+    border-top-left-radius: 5rem;
+}
+#depoimento button:nth-last-child(1):hover{
+    box-shadow: -.5rem 0 .6rem rgba(192, 192, 192, 0.1);
+}
+#depoimento #carroussel .depoimento-child{
+    flex: none;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 70%, rgba(255, 255, 255, .8));
+    padding: 2rem 6rem;
+    border-radius: 5rem;
+    border-top-right-radius: 0;
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+}
+#carroussel .depoimento-child img{
+    height: 80%;
+}
+.text h1{
+    font-size: 400%;
+    margin-bottom: 2rem;
+    color: var(--blue2);
+    text-shadow: 2px 2px 5px rgba(192, 192, 192, 0.7);
+}
+.text p{
+    font-size: 130%;
+    text-align: justify;
 }
 
+#carroussel .depoimento-child:nth-of-type(1){
+    display: none;
+}
 
 #inscricao{
     height: 100vh;
@@ -222,7 +285,7 @@ section#sobre-nos #sobre-nos-img{
     display: flex;
     gap: 2vh;
     flex-direction: column;
-    background: linear-gradient(to right top, white,rgba(255, 255, 255, .8));
+    background: white;
     padding: 2rem 1.5rem;
     border-radius: 1rem;
 }
