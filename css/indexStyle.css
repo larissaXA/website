@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 :root{
-    --green1: #00ffa2;
+    --green1: #00ff88;
     --blue1: #28ace6;
     --green2: #00c77e;
     --blue2: #0182b9;
@@ -170,6 +170,8 @@ section#sobre-nos #sobre-nos-img{
     font-size: 120%;
     color: white;
     text-align: justify;
+    letter-spacing: 1px;
+    word-spacing: 2px;
 }
 #container a{
     margin-bottom:2rem;
@@ -199,7 +201,74 @@ section#sobre-nos #sobre-nos-img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    padding-bottom: 3rem;
+} 
+#impacto > h1{ 
+    height: 25%;
+    width: 100%;
+    background: white;
+    font-size: 450%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    letter-spacing: 4px;
+    color: var(--green2);
+    filter: brightness(110%);
+    box-shadow: .2rem .2rem .6rem rgb(100, 100, 100);
+    text-shadow: 2px 2px 5px rgba(192, 192, 192);
+}
+#cards-container{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    gap: 5rem;
+}
+#cards-container .impacto-topicos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+#cards-container .impacto-topicos img{
+    transition: .3s;
+    filter: drop-shadow(0 0 .5rem transparent);
+    height: 10rem;
+    image-rendering:crisp-edges;
+    transform: translateY(2rem);
+}
+#cards-container .impacto-topicos h1{
+    padding: 1rem;
+    border-radius: 5rem;
+    transition: .3s;
+    color: var(--green1);
+    text-shadow: 3px 3px 5px rgb(114, 114, 114);
+    letter-spacing: 2px;
+    transform: translateY(2rem);
+}
+#cards-container .impacto-topicos p{
+    color: rgb(41, 41, 41);
+    font-weight: 900;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    transform: translateY(5rem);
+    opacity: 0;
+    transition: .3s;
+    text-align: center;
+}
+#cards-container .impacto-topicos:hover{
+    cursor: pointer;
+}
+#cards-container .impacto-topicos:hover img, #cards-container .impacto-topicos:hover h1,#cards-container .impacto-topicos:hover p{
+    transform: translateY(0);
+    transition: .3s;
+}
+#cards-container .impacto-topicos:hover img{
+    filter: drop-shadow(.4rem .4rem .2rem rgb(114, 114, 114));
+}
+#cards-container .impacto-topicos:hover p{
+    opacity: 1;
 }
 
 #depoimento{
@@ -225,6 +294,7 @@ section#sobre-nos #sobre-nos-img{
     border: none;
     font-size: 500%;
     color: transparent;
+    transition: all .2s, color .3s;
 }
 #depoimento button:nth-last-child(1){
     right: 0;
@@ -233,28 +303,48 @@ section#sobre-nos #sobre-nos-img{
     color: var(--blue1);
     height: 100%;
     cursor: pointer;
-    transition: all .2s, color .4s;
+    transition: all .2s, color .3s;
     background: rgba(192, 192, 192, 0.1);
     box-shadow: .5rem 0 .5rem rgba(192, 192, 192, 0.1);
-    border-bottom-left-radius: 5rem;
-    border-top-left-radius: 5rem;
 }
-#depoimento button:nth-last-child(1):hover{
+#depoimento button:nth-of-type(1):hover{
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+#depoimento button:nth-of-type(2):hover{
     box-shadow: -.5rem 0 .6rem rgba(192, 192, 192, 0.1);
+    border: 0;
+    border-bottom-right-radius: 5rem;
 }
 #depoimento #carroussel .depoimento-child{
     flex: none;
     width: 100%;
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 70%, rgba(255, 255, 255, .8));
+    background: white;
     padding: 2rem 6rem;
-    border-radius: 5rem;
-    border-top-right-radius: 0;
     display: flex;
     gap: 7rem;
     align-items: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.depoimento-child:nth-of-type(1),.depoimento-child:nth-of-type(3){
+    border-radius: 5rem;
+    border-top-right-radius: 0;
+}
+.depoimento-child:nth-of-type(2){
+    border-radius: 5rem;
+    border-bottom-left-radius: 0;
 }
 #carroussel .depoimento-child img{
     height: 80%;
+}
+#carroussel .depoimento-child:nth-of-type(1) img{
+    height: 90%;
+    margin-bottom: 2rem;
+}
+#carroussel .depoimento-child:nth-of-type(2) img{ 
+    height: 95%;
+    margin-bottom: 4rem;
 }
 .text h1{
     font-size: 400%;
@@ -265,10 +355,6 @@ section#sobre-nos #sobre-nos-img{
 .text p{
     font-size: 130%;
     text-align: justify;
-}
-
-#carroussel .depoimento-child:nth-of-type(1){
-    display: none;
 }
 
 #inscricao{
@@ -362,7 +448,8 @@ section#sobre-nos #sobre-nos-img{
 #inscricao form button:hover{
     cursor: pointer;
     background-color: transparent;
-    color: var(--blue2);
+    border-color: var(--blue1);
+    color: var(--blue1);
 }
 
 footer{
