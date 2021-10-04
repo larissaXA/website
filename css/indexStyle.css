@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 :root{
-    --green1: #00ff88;
+    --green1: #5bff76;
     --blue1: #28ace6;
     --green2: #00c77e;
     --blue2: #0182b9;
@@ -134,7 +134,6 @@ nav ul li a:hover::before{
 }
 
 section#sobre-nos{
-    /* background-color: var(--blue1); */
     height: 75vh;
     display: flex;
     flex-direction: row;
@@ -158,12 +157,11 @@ section#sobre-nos #sobre-nos-img{
     justify-content: space-around;
     text-shadow: 1px 1px 3px rgb(100, 100, 100);
 }
-#container h1{
+#container h1{ 
     margin-top: 2.5rem;
     font-size: 280%;
     color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;    
 }
 #container p{
     margin-bottom: 2rem;
@@ -174,6 +172,8 @@ section#sobre-nos #sobre-nos-img{
     word-spacing: 2px;
 }
 #container a{
+    font-family: 'Josefin Sans', sans-serif;    
+    font-weight: 600;
     margin-bottom:2rem;
     background-color: white;
     padding: .7rem 2.1rem;
@@ -195,27 +195,34 @@ section#sobre-nos #sobre-nos-img{
     background-color: transparent;
 }
 
-#impacto{
+#importancia{
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3rem;
 } 
-#impacto > h1{ 
+#importancia > h1{ 
+    font-family: 'Josefin Sans', sans-serif;    
     height: 25%;
     width: 100%;
-    background: white;
-    font-size: 450%;
+    letter-spacing: 2px;
+    color: black;
+    font-size: 480%;
     align-items: center;
     justify-content: center;
     display: flex;
-    letter-spacing: 4px;
-    color: var(--green2);
     filter: brightness(110%);
-    box-shadow: .2rem .2rem .6rem rgb(100, 100, 100);
-    text-shadow: 2px 2px 5px rgba(192, 192, 192);
+    text-shadow: 2px 2px 5px rgb(114, 114, 114);
+}
+#importancia > h1::after{
+    display:inline-flex;
+    position: absolute;
+    content: " ";
+    width: 35%;
+    height: .6vh;
+    margin-top: 5rem;
+    background: var(--green1);
 }
 #cards-container{
     height: 75%;
@@ -225,31 +232,38 @@ section#sobre-nos #sobre-nos-img{
     padding: 0 4rem;
     gap: 5rem;
 }
-#cards-container .impacto-topicos{
+#cards-container .importancia-topicos{
+    border-radius: .8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+    background-color: rgb(255, 255, 255);
+    padding:1rem;
+    height: 45%;
+    width: 50%;
+    transition: .3s;
+    box-shadow: .2rem .2rem .5rem rgb(114, 114, 114);
 }
-#cards-container .impacto-topicos img{
+#cards-container .importancia-topicos img{
     transition: .3s;
     filter: drop-shadow(0 0 .5rem transparent);
-    height: 10rem;
+    height: 6rem;
     image-rendering:crisp-edges;
     transform: translateY(2rem);
 }
-#cards-container .impacto-topicos h1{
-    padding: 1rem;
-    border-radius: 5rem;
+#cards-container .importancia-topicos h1{
+    font-family: 'Josefin Sans', sans-serif;    
+    font-size: 170%;
     transition: .3s;
-    color: var(--green1);
-    text-shadow: 3px 3px 5px rgb(114, 114, 114);
-    letter-spacing: 2px;
+    color: var(--green2);
+    text-shadow: 2px 2px 2px transparent;
     transform: translateY(2rem);
+    margin-bottom: 1rem;
 }
-#cards-container .impacto-topicos p{
-    color: rgb(41, 41, 41);
-    font-weight: 900;
+#cards-container .importancia-topicos p{
+    color: rgb(71, 71, 71);
     letter-spacing: 1px;
     word-spacing: 2px;
     transform: translateY(5rem);
@@ -257,17 +271,23 @@ section#sobre-nos #sobre-nos-img{
     transition: .3s;
     text-align: center;
 }
-#cards-container .impacto-topicos:hover{
+#cards-container .importancia-topicos:hover{
     cursor: pointer;
+    height: 60%;
+    transition: .3s;
 }
-#cards-container .impacto-topicos:hover img, #cards-container .impacto-topicos:hover h1,#cards-container .impacto-topicos:hover p{
+#cards-container .importancia-topicos:hover img, #cards-container .importancia-topicos:hover h1,#cards-container .importancia-topicos:hover p{
     transform: translateY(0);
     transition: .3s;
 }
-#cards-container .impacto-topicos:hover img{
-    filter: drop-shadow(.4rem .4rem .2rem rgb(114, 114, 114));
+#cards-container .importancia-topicos:hover img{
+    filter: drop-shadow(.3rem .3rem .1rem rgb(192,192,192));
 }
-#cards-container .impacto-topicos:hover p{
+#cards-container .importancia-topicos:hover h1{
+    text-shadow: 2px 2px 2px rgba(192, 192, 192, 0.7);
+    letter-spacing: 3px;
+}
+#cards-container .importancia-topicos:hover p{
     opacity: 1;
 }
 
@@ -347,6 +367,7 @@ section#sobre-nos #sobre-nos-img{
     margin-bottom: 4rem;
 }
 .text h1{
+    font-family: 'Josefin Sans', sans-serif;    
     font-size: 400%;
     margin-bottom: 2rem;
     color: var(--blue2);
@@ -379,6 +400,7 @@ section#sobre-nos #sobre-nos-img{
     text-align: center;
 }
 #inscricao form h1{
+    font-family: 'Josefin Sans', sans-serif;    
     font-size: 230%;
     letter-spacing: 2px;
     color: var(--blue2);
@@ -406,11 +428,13 @@ section#sobre-nos #sobre-nos-img{
     font-size: 100%;
 }
 #inscricao .input-box label{
+    font-family: 'Josefin Sans', sans-serif;    
     visibility: hidden;
     position: absolute;
     left: 1rem;
 }
 #inscricao .input-box input::placeholder{
+    font-family: 'Josefin Sans', sans-serif;    
     color: black;
     position: absolute;
     left: .8rem;
@@ -432,6 +456,7 @@ section#sobre-nos #sobre-nos-img{
     background-color: rgba(192, 192, 192, 0.1);
 }
 #inscricao form button{
+    font-family: 'Josefin Sans', sans-serif;    
     align-self: center;
     width: fit-content;
     background-color: var(--blue2);
@@ -439,6 +464,7 @@ section#sobre-nos #sobre-nos-img{
     border: .2rem solid var(--blue2);
     border-radius: 5rem;
     font-size: 130%;
+    font-weight: 600;
     letter-spacing: 1px;
     text-decoration: none;
     color:white;
@@ -454,4 +480,41 @@ section#sobre-nos #sobre-nos-img{
 
 footer{
     height: 30vh;
+    background-color: white;
+    box-shadow: 0 -.1rem .5rem rgb(71, 71, 71);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer #midias-sociais{
+    display: flex;
+    gap: 2vw;
+}
+footer a img{ 
+    transition: .2s;
+    filter: grayscale(100%);
+    height: 6vh;
+    image-rendering:crisp-edges;
+}
+footer #midias-sociais a:hover img{
+    transition: .2s;
+    filter: grayscale(0);
+}
+footer a{
+    transition: .2s;
+    color: black;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;   
+    font-size: 120%;
+}
+footer a:hover{
+    transition: .2s;
+}
+footer a:nth-of-type(1):hover{
+    color: var(--blue2);
+}
+footer a:nth-of-type(2):hover{
+    color: var(--green2);
+    filter: brightness(.7);
 }
